@@ -2,5 +2,9 @@ require_relative 'offer'
 
 # TeaOffer class
 class TeaOffer < Offer
+  def apply_offer
+    return 0 if product_count.zero?
 
+    product_price * (product_count / 2).to_i + ((product_count % 2).zero? ? 0 : product_price)
+  end
 end
