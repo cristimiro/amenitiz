@@ -1,7 +1,7 @@
 require_relative '../../model/strawberries_offer'
 
 RSpec.describe StrawberriesOffer do
-  let(:strawberries_offer) { StrawberriesOffer.new(product_price: product_price, product_count: product_count) }
+  let(:strawberries_offer) { described_class.new(product_price: product_price, product_count: product_count) }
   let(:product_price) { 5.0 }
 
   describe '#apply_offer' do

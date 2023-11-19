@@ -1,7 +1,7 @@
 require_relative '../../model/product'
 
 RSpec.describe Product do
-  let(:product) { Product.new(code: 'CF1', name: 'Coffee', price: 11.23) }
+  let(:product) { described_class.new(code: 'CF1', name: 'Coffee', price: 11.23) }
 
   describe '#display_price' do
     subject { product.display_price }
