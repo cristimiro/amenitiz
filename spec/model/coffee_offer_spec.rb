@@ -1,12 +1,10 @@
 require_relative '../../model/coffee_offer'
 
 RSpec.describe CoffeeOffer do
-  let(:coffee_offer) { described_class.new(product_price: product_price, product_count: product_count) }
+  subject { described_class.new(product_price: product_price, product_count: product_count).apply_offer }
   let(:product_price) { 11.23 }
 
   describe '#apply_offer' do
-    subject { coffee_offer.apply_offer }
-
     context 'when product_count is 0' do
       let(:product_count) { 0 }
 
