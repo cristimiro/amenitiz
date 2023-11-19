@@ -1,9 +1,14 @@
+require_relative '../service/offer_service'
+
 # Cart class. Used to hold bucket list and total price.
 class Cart
   attr_accessor :basket
-  attr_reader :total_price
 
-  def initialize(basket)
+  def initialize(basket:)
     @basket = basket
+  end
+
+  def totals
+    "#{OfferService.new(basket: basket).apply_offers}€"
   end
 end
