@@ -7,4 +7,8 @@ class Product
     @name = name
     @price = price
   end
+
+  def display_price
+    "#{price}€"
+  end
 end
