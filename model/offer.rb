@@ -6,4 +6,8 @@ class Offer
     @product_price = product_price
     @product_count = product_count
   end
+
+  def apply_offer
+    0 if product_count.zero?
+  end
 end
