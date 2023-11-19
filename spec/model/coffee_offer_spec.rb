@@ -22,7 +22,7 @@ RSpec.describe CoffeeOffer do
     context 'when product_count is 3 or more' do
       let(:product_count) { 3 }
 
-      it { is_expected.to eq((2 / 3) * product_price) }
+      it { is_expected.to eq(product_count * ((2.00 / 3.00) * product_price)) }
     end
   end
 end
